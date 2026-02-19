@@ -1,8 +1,8 @@
 export default function MathBackground({ variant = 'light' }: { variant?: 'light' | 'dark' | 'blue' }) {
   const isDark = variant === 'dark';
   const isBlue = variant === 'blue';
-  const stroke = isDark ? 'rgba(255,255,255,0.15)' : isBlue ? 'rgba(255,255,255,0.2)' : 'rgba(37,99,235,0.22)';
-  const fill = isDark ? 'rgba(255,255,255,0.07)' : isBlue ? 'rgba(255,255,255,0.1)' : 'rgba(59,130,246,0.12)';
+  const stroke = isDark ? 'rgba(255,255,255,0.2)' : isBlue ? 'rgba(255,255,255,0.24)' : 'rgba(37,99,235,0.3)';
+  const fill = isDark ? 'rgba(255,255,255,0.09)' : isBlue ? 'rgba(255,255,255,0.12)' : 'rgba(59,130,246,0.18)';
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
@@ -18,11 +18,11 @@ export default function MathBackground({ variant = 'light' }: { variant?: 'light
         </defs>
         <rect width="100%" height="100%" fill={`url(#grid-${variant})`}/>
 
-        <circle cx="10%" cy="20%" r="80" fill="none" stroke={stroke} strokeWidth="1" className="animate-spin-slow" style={{ transformOrigin: '10% 20%' }}/>
-        <circle cx="10%" cy="20%" r="50" fill="none" stroke={stroke} strokeWidth="0.5" className="animate-spin-reverse" style={{ transformOrigin: '10% 20%' }}/>
+        <circle cx="10%" cy="20%" r="80" fill="none" stroke={stroke} strokeWidth="1.3" className="animate-spin-slow" style={{ transformOrigin: '10% 20%' }}/>
+        <circle cx="10%" cy="20%" r="50" fill="none" stroke={stroke} strokeWidth="0.9" className="animate-spin-reverse" style={{ transformOrigin: '10% 20%' }}/>
 
-        <circle cx="90%" cy="75%" r="120" fill="none" stroke={stroke} strokeWidth="1" className="animate-spin-slow" style={{ transformOrigin: '90% 75%', animationDuration: '25s' }}/>
-        <circle cx="90%" cy="75%" r="70" fill="none" stroke={stroke} strokeWidth="0.5" className="animate-spin-reverse" style={{ transformOrigin: '90% 75%', animationDuration: '18s' }}/>
+        <circle cx="90%" cy="75%" r="120" fill="none" stroke={stroke} strokeWidth="1.3" className="animate-spin-slow" style={{ transformOrigin: '90% 75%', animationDuration: '25s' }}/>
+        <circle cx="90%" cy="75%" r="70" fill="none" stroke={stroke} strokeWidth="0.9" className="animate-spin-reverse" style={{ transformOrigin: '90% 75%', animationDuration: '18s' }}/>
 
         <polygon points="70%,5% 75%,15% 65%,15%" fill={fill} stroke={stroke} strokeWidth="1" className="animate-float" style={{ transformOrigin: '70% 10%' }}/>
         <polygon points="20%,80% 25%,90% 15%,90%" fill={fill} stroke={stroke} strokeWidth="1" className="animate-float-slow" style={{ transformOrigin: '20% 85%' }}/>

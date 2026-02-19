@@ -11,18 +11,18 @@ const equations = [
   { text: 'sin²θ+cos²θ=1', x: '15%', y: '90%', delay: '3.5s', duration: '10s' },
 ];
 
-export default function FloatingEquations({ opacity = 0.12 }: { opacity?: number }) {
+export default function FloatingEquations({ opacity = 0.2 }: { opacity?: number }) {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none select-none" aria-hidden="true">
       {equations.map((eq, i) => (
         <div
           key={i}
-          className="absolute font-mono font-bold text-primary-600"
+          className="absolute font-mono font-bold text-primary-500"
           style={{
             left: eq.x,
             top: eq.y,
             opacity,
-            fontSize: i % 3 === 0 ? '0.85rem' : i % 3 === 1 ? '0.75rem' : '0.7rem',
+            fontSize: i % 3 === 0 ? '1.1rem' : i % 3 === 1 ? '0.95rem' : '0.85rem',
             animation: `floatSlow ${eq.duration} ease-in-out ${eq.delay} infinite`,
             letterSpacing: '0.02em',
           }}

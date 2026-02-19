@@ -20,7 +20,12 @@ export default function About() {
       className="relative min-h-screen flex items-center pt-16 overflow-hidden"
     >
       <MathBackground variant="light" />
-      <FloatingEquations opacity={0.1} />
+      <div className="hidden md:block">
+        <FloatingEquations opacity={0.28} />
+      </div>
+      <div className="block md:hidden">
+        <FloatingEquations opacity={0.4} />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
         <div

@@ -1,7 +1,21 @@
 import { useEffect, useState } from 'react';
 
+const loaderEquations = [
+  'π ≈ 3.14159',
+  'E = mc²',
+  'x² + y² = r²',
+  '∫ₐᵇ f(x)dx',
+  'lim x→0 sin x / x = 1',
+  'Δ = b² - 4ac',
+  '∑ₙ n²',
+  'f\'(x) = 0',
+  'P(A∩B) = P(A)P(B)',
+  'e^{iπ} + 1 = 0',
+];
+
 export default function Loader({ onComplete }: { onComplete: () => void }) {
   const [progress, setProgress] = useState(0);
+  const [equationIndex, setEquationIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,9 +31,16 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
     return () => clearInterval(interval);
   }, [onComplete]);
 
+  useEffect(() => {
+    const eqInterval = setInterval(() => {
+      setEquationIndex((prev) => (prev + 1) % loaderEquations.length);
+    }, 260);
+    return () => clearInterval(eqInterval);
+  }, []);
+
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
-      <div className="flex flex-col items-center gap-8">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white math-pattern-lg overflow-hidden">
+      <div className="flex flex-col items-center gap-8 relative z-10">
         <div className="relative w-24 h-24">
           <svg className="w-24 h-24 animate-spin-slow" viewBox="0 0 96 96" fill="none">
             <circle cx="48" cy="48" r="44" stroke="#dbeafe" strokeWidth="3"/>
@@ -50,6 +71,12 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           </p>
         </div>
 
+        <div className="min-h-[28px] flex items-center justify-center">
+          <span className="text-xs sm:text-sm font-mono text-primary-600">
+            {loaderEquations[equationIndex]}
+          </span>
+        </div>
+
         <div className="w-48 h-1 bg-blue-50 rounded-full overflow-hidden">
           <div
             className="h-full rounded-full transition-all duration-100"
@@ -67,6 +94,7 @@ export default function Loader({ onComplete }: { onComplete: () => void }) {
           <span className="animate-bounce-slow" style={{ animationDelay: '0.9s' }}>Δ</span>
         </div>
       </div>
+
     </div>
   );
 }

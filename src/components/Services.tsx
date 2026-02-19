@@ -1,6 +1,7 @@
 import { Video, Users, BookOpen, Target, Zap, BarChart3, Clock, Globe } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import MathBackground from './MathBackground';
+import FloatingEquations from './FloatingEquations';
 
 const services = [
   {
@@ -70,6 +71,7 @@ export default function Services() {
       className="relative py-24 overflow-hidden"
     >
       <MathBackground variant="light" />
+      <FloatingEquations opacity={0.16} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
