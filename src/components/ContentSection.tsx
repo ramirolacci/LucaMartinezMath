@@ -151,25 +151,6 @@ export default function ContentSection() {
           ))}
         </div>
 
-        <div
-          className={`mt-12 rounded-2xl p-6 bg-white border border-primary-100 shadow-sm flex flex-col sm:flex-row items-center gap-4 transition-all duration-700 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-        >
-          <div className="w-12 h-12 rounded-xl bg-blue-gradient flex items-center justify-center flex-shrink-0">
-            <Calculator size={22} className="text-white" />
-          </div>
-          <div className="flex-1 text-center sm:text-left">
-            <div className="font-bold text-dark">¿No sabés en qué nivel estás?</div>
-            <div className="text-sm text-slate-500 mt-0.5">
-              Escribime y hacemos una evaluación diagnóstica para ubicarte en el nivel correcto.
-            </div>
-          </div>
-          <button
-            onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            className="btn-primary text-sm py-2.5 px-6 whitespace-nowrap flex-shrink-0"
-          >
-            Quiero una evaluación
-          </button>
-        </div>
       </div>
     </section>
   );

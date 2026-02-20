@@ -1,13 +1,11 @@
-import { BookOpen, Award, Users, TrendingUp } from 'lucide-react';
+import { BookOpen, Award } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import MathBackground from './MathBackground';
 import FloatingEquations from './FloatingEquations';
 
 const stats = [
   { value: '+2', label: 'Años de experiencia', icon: Award },
-  { value: '+50', label: 'Alumnos aprobados', icon: Users },
-  { value: '98%', label: 'Tasa de aprobación', icon: TrendingUp },
-  { value: 'K-12', label: 'Todos los niveles', icon: BookOpen },
+  { value: 'K-12', label: 'Enfoque para estudio avanzado', icon: BookOpen },
 ];
 
 export default function About() {
@@ -32,7 +30,7 @@ export default function About() {
           className={`text-center mb-14 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
         >
           <span className="inline-block text-xs font-bold tracking-widest uppercase text-primary-600 bg-primary-50 px-4 py-1.5 rounded-full mb-4">
-            El Profesor
+            Profesor
           </span>
           <h1
             className="font-black leading-tight text-dark"
@@ -50,7 +48,7 @@ export default function About() {
           >
             <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
               <p className="text-xl font-semibold text-dark">
-                Hola, soy <span className="text-gradient font-bold">Luca Martínez</span>, Licenciado en Matemáticas con más de 2 años de experiencia en clases particulares.
+                Hola, soy <span className="text-gradient font-bold">Luca Martínez</span>, estudiante avanzado de Ciencias Matemáticas con más de 2 años de experiencia en clases particulares.
               </p>
               <p>
                 Me especializo en hacer que las matemáticas sean accesibles y comprensibles para todos. Mi método se basa en identificar las dificultades específicas de cada alumno y construir desde los fundamentos, paso a paso.
@@ -61,7 +59,7 @@ export default function About() {
             </div>
 
             <div className="flex flex-wrap gap-3 pt-2">
-              {['Álgebra', 'Cálculo', 'Trigonometría', 'Estadística', 'Geometría', 'Física'].map((tag) => (
+              {['Álgebra', 'Cálculo', 'Álgebra lineal', 'Aritmética', 'Trigonometría'].map((tag) => (
                 <span key={tag} className="px-4 py-1.5 bg-primary-50 text-primary-700 rounded-full text-sm font-medium border border-primary-100">
                   {tag}
                 </span>

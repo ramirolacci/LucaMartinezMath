@@ -38,7 +38,7 @@ const contactInfo = [
   },
 ];
 
-const niveles = ['Primaria', 'Secundaria', 'Preuniversitario', 'Universitario', 'Otro'];
+const niveles = ['Secundaria', 'Preuniversitario', 'Universitario', 'Otro'];
 
 export default function Contact() {
   const { ref, isVisible } = useIntersectionObserver();
@@ -99,7 +99,7 @@ export default function Contact() {
           >
             <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 shadow-lg border border-primary-50 space-y-5">
                 <h3 className="text-xl font-bold text-dark" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  Contame qué necesitás
+                  Contactame
                 </h3>
 
                 <div className="grid sm:grid-cols-2 gap-5">
@@ -156,7 +156,7 @@ export default function Contact() {
 
                 <div>
                   <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="mensaje">
-                    Contame tu caso *
+                    Contame en qué puedo ayudarte *
                   </label>
                   <textarea
                     id="mensaje"

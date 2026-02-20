@@ -113,7 +113,7 @@ export default function Footer() {
                 </li>
                 <li className="text-slate-400">
                   <span className="text-primary-400 font-medium block text-xs uppercase tracking-wide mb-0.5">Zona</span>
-                  Tigre, Buenos Aires, Argentina
+                  Pacheco, Buenos Aires, Argentina
                 </li>
               </ul>
 

@@ -25,7 +25,7 @@ const plans = [
     name: 'Pack Mensual',
     price: '$XXXXX',
     period: 'por mes',
-    description: 'El plan más elegido. 2 clases semanales con seguimiento personalizado.',
+    description: 'El plan más elegido. A partir de 1 clase por semana con seguimiento personalizado.',
     features: [
       '8 clases de 60 min / mes',
       'Seguimiento de progreso',
@@ -59,8 +59,8 @@ const plans = [
 
 const faqs = [
   {
-    q: '¿Cómo es la primera clase?',
-    a: 'La primera clase es de diagnóstico. Evaluamos tu nivel, identificamos tus dificultades y diseñamos un plan de trabajo personalizado.',
+    q: '¿Con cuánta antelación reservo una clase?',
+    a: 'Las clases se reservan con al menos 24 hs de antelación desde el momento en que me contactaste, dentro del horario de disponibilidad.',
   },
   {
     q: '¿Cómo se realizan los pagos?',

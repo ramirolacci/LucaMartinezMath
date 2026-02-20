@@ -15,7 +15,7 @@ const services = [
   {
     icon: Users,
     title: 'Clases Presenciales',
-    description: 'Nos encontramos en Capital Federal. Ideal para quienes prefieren el contacto directo y el trabajo con material físico.',
+    description: 'Nos encontramos en General Pacheco y alrededores. Ideal para quienes prefieren el contacto directo y el trabajo con material físico.',
     badge: null,
     badgeColor: '',
     highlight: false,
@@ -55,7 +55,6 @@ const services = [
 ];
 
 const levels = [
-  { name: 'Primaria', icon: '📐', desc: 'Aritmética, geometría básica, fracciones' },
   { name: 'Secundaria', icon: '📊', desc: 'Álgebra, funciones, trigonometría, estadística' },
   { name: 'Preuniversitario', icon: '🎯', desc: 'Ingreso UBA, CONICET, preparatorios' },
   { name: 'Universitario', icon: '⚡', desc: 'Análisis I/II, Álgebra lineal, Probabilidad' },
@@ -87,7 +86,7 @@ export default function Services() {
             ¿Servicios?
           </h2>
           <p className="mt-4 text-slate-500 text-lg max-w-2xl mx-auto">
-            Clases adaptadas a tus necesidades, tu ritmo y tus objetivos académicos.
+            Clases adaptadas a tus necesidades, tu ritmo y tus objetivos académicos, en modalidad individual o grupal.
           </p>
         </div>
 
@@ -139,7 +138,7 @@ export default function Services() {
               Niveles que atiendo
             </h3>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {levels.map((level, i) => (
               <div key={i} className="bg-white rounded-xl p-5 text-center shadow-sm card-hover">
                 <div className="text-4xl mb-3">{level.icon}</div>
