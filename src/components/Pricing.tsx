@@ -28,7 +28,7 @@ const plans = [
     priceNote: '$12.000 por clase',
     description: 'El plan más elegido. A partir de 1 clase por semana con seguimiento personalizado.',
     features: [
-      '8 clases de 60 min / mes',
+      '4, 8, 12 o hasta 16 clases de 60 min / mes',
       'Seguimiento de progreso',
       'Material de estudio completo',
       'Consultas ilimitadas por WhatsApp',
