@@ -7,7 +7,7 @@ const plans = [
   {
     icon: Zap,
     name: 'Clase Individual',
-    price: '$XXXX',
+    price: '$15.000',
     period: 'por clase',
     description: 'Ideal para resolver dudas puntuales o preparar un examen específico.',
     features: [
@@ -23,8 +23,9 @@ const plans = [
   {
     icon: Star,
     name: 'Pack Mensual',
-    price: '$XXXXX',
+    price: '$48.000',
     period: 'por mes',
+    priceNote: '$12.000 por clase',
     description: 'El plan más elegido. A partir de 1 clase por semana con seguimiento personalizado.',
     features: [
       '8 clases de 60 min / mes',
@@ -41,7 +42,7 @@ const plans = [
   {
     icon: Crown,
     name: 'Clase Grupal',
-    price: '$XXXXX',
+    price: '$10.000',
     period: 'por alumno',
     description: 'Clases en grupo reducido para compartir costos y aprender junto a otros.',
     features: [
@@ -170,6 +171,11 @@ export default function Pricing() {
                   <span className={`text-sm ml-1 ${plan.highlight ? 'text-primary-300' : 'text-slate-400'}`}>
                     {plan.period}
                   </span>
+                  {plan.priceNote && (
+                    <div className={`text-xs mt-1 ${plan.highlight ? 'text-primary-200' : 'text-slate-500'}`}>
+                      {plan.priceNote}
+                    </div>
+                  )}
                 </div>
 
                 <ul className="space-y-3 mb-8 flex-1">
