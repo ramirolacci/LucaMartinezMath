@@ -69,7 +69,7 @@ const faqs = [
   },
   {
     q: '¿Qué pasa si no puedo ir a una clase?',
-    a: 'Se puede reprogramar con al menos 24 horas de anticipación sin costo adicional. Las clases tienen una vigencia de 30 días.',
+    a: 'Se puede reprogramar con al menos 24 horas de anticipación sin costo adicional.',
   },
 ];
 

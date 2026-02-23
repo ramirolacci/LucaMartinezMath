@@ -3,13 +3,12 @@ import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Services from './components/Services';
-import ContentSection from './components/ContentSection';
 import Pricing from './components/Pricing';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { useActiveSection } from './hooks/useActiveSection';
 
-const SECTION_IDS = ['sobre-mi', 'servicios', 'contenidos', 'precios', 'contacto'];
+const SECTION_IDS = ['sobre-mi', 'servicios', 'precios', 'contacto'];
 
 function MainApp() {
   const activeSection = useActiveSection(SECTION_IDS);
@@ -20,7 +19,6 @@ function MainApp() {
       <main>
         <About />
         <Services />
-        <ContentSection />
         <Pricing />
         <Contact />
       </main>
