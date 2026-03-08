@@ -1,3 +1,5 @@
+import { Instagram } from 'lucide-react';
+
 const navLinks = [
   { id: 'sobre-mi', label: 'Sobre mí' },
   { id: 'servicios', label: 'Servicios' },
@@ -93,8 +95,11 @@ export default function Footer() {
                   luca@lucamartinezmath.com
                 </li>
                 <li className="text-slate-400">
-                  <span className="text-primary-400 font-medium block text-xs uppercase tracking-wide mb-0.5">Zona</span>
-                  Pacheco, Buenos Aires, Argentina
+                  <span className="text-primary-400 font-medium block text-xs uppercase tracking-wide mb-0.5">Instagram</span>
+                  <a href="https://www.instagram.com/lucamateclases/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
+                    <Instagram size={14} className="text-primary-400" />
+                    @lucamateclases
+                  </a>
                 </li>
               </ul>
 

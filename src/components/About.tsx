@@ -5,7 +5,7 @@ import FloatingEquations from './FloatingEquations';
 
 const stats = [
   { value: '+2', label: 'Años de experiencia', icon: Award },
-  { value: 'Secundaria a Universitario', label: '', icon: BookOpen },
+  { value: 'Sec. - Univ.', label: '', icon: BookOpen },
 ];
 
 export default function About() {

@@ -55,9 +55,9 @@ const services = [
 ];
 
 const levels = [
-  { name: 'Secundaria', icon: '📊', desc: 'Álgebra, funciones, trigonometría, estadística' },
-  { name: 'Preuniversitario', icon: '🎯', desc: 'Ingreso UBA, CONICET, preparatorios' },
-  { name: 'Universitario', icon: '⚡', desc: 'Análisis I/II, Álgebra lineal, Probabilidad' },
+  { name: 'Secundaria', icon: '📊', desc: 'Álgebra, funciones, trigonometría' },
+  { name: 'Preuniversitario', icon: '🎯', desc: 'CBC o ingreso a otras universidades' },
+  { name: 'Universitario', icon: '⚡', desc: 'Análisis I/II, Álgebra lineal' },
 ];
 
 export default function Services() {
@@ -94,11 +94,10 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={i}
-              className={`relative bg-white rounded-2xl p-6 border card-hover ${
-                service.highlight
+              className={`relative bg-white rounded-2xl p-6 border card-hover ${service.highlight
                   ? 'border-primary-300 shadow-lg'
                   : 'border-slate-100 shadow-sm'
-              } transition-all duration-500`}
+                } transition-all duration-500`}
               style={{
                 transitionDelay: `${i * 80}ms`,
                 opacity: isVisible ? 1 : 0,
@@ -114,9 +113,8 @@ export default function Services() {
                 <div className="absolute inset-0 rounded-2xl pointer-events-none" style={{ background: 'linear-gradient(135deg, rgba(0,123,255,0.03) 0%, rgba(30,58,138,0.04) 100%)' }} />
               )}
               <div
-                className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${
-                  service.highlight ? 'bg-blue-gradient' : 'bg-primary-50'
-                }`}
+                className={`w-12 h-12 rounded-xl flex items-center justify-center mb-4 ${service.highlight ? 'bg-blue-gradient' : 'bg-primary-50'
+                  }`}
               >
                 <service.icon size={22} className={service.highlight ? 'text-white' : 'text-primary-600'} />
               </div>

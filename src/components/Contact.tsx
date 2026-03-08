@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Send, MessageCircle, Mail, MapPin, Phone } from 'lucide-react';
+import { Send, MessageCircle, Mail, MapPin, Instagram } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import MathBackground from './MathBackground';
 import FloatingEquations from './FloatingEquations';
@@ -25,15 +25,15 @@ const contactInfo = [
     href: 'mailto:luca@lucamartinezmath.com',
   },
   {
+    icon: Instagram,
+    label: 'Instagram',
+    value: '@lucamateclases',
+    href: 'https://www.instagram.com/lucamateclases/',
+  },
+  {
     icon: MapPin,
     label: 'Zona',
     value: 'General Pacheco, Buenos Aires, Argentina',
-    href: null,
-  },
-  {
-    icon: Phone,
-    label: 'Disponibilidad',
-    value: 'Lun–Sáb, 8:00–22:00 hs',
     href: null,
   },
 ];
@@ -86,7 +86,7 @@ export default function Contact() {
             className="font-black leading-none text-dark"
             style={{ fontFamily: 'Poppins, sans-serif', fontSize: 'clamp(2.5rem, 6vw, 5rem)' }}
           >
-            ¿Contacto?
+            ¿Hablamos?
           </h2>
           <p className="mt-4 text-slate-500 text-lg max-w-2xl mx-auto">
             Escribime y te respondo en menos de 24 horas para coordinar día y horario de clase.
@@ -98,100 +98,100 @@ export default function Contact() {
             className={`transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
           >
             <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 shadow-lg border border-primary-50 space-y-5">
-                <h3 className="text-xl font-bold text-dark" style={{ fontFamily: 'Poppins, sans-serif' }}>
-                  Contactame
-                </h3>
+              <h3 className="text-xl font-bold text-dark" style={{ fontFamily: 'Poppins, sans-serif' }}>
+                Contactame
+              </h3>
 
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="nombre">
-                      Nombre completo *
-                    </label>
-                    <input
-                      id="nombre"
-                      name="nombre"
-                      type="text"
-                      required
-                      value={form.nombre}
-                      onChange={handleChange}
-                      placeholder="Charly García"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-dark text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-200 placeholder:text-slate-300"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="email">
-                      Email *
-                    </label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={form.email}
-                      onChange={handleChange}
-                      placeholder="suigeneris@email.com"
-                      className="w-full px-4 py-3 rounded-xl border border-slate-200 text-dark text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-200 placeholder:text-slate-300"
-                    />
-                  </div>
-                </div>
-
+              <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="nivel">
-                    Nivel educativo *
+                  <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="nombre">
+                    Nombre completo *
                   </label>
-                  <select
-                    id="nivel"
-                    name="nivel"
+                  <input
+                    id="nombre"
+                    name="nombre"
+                    type="text"
                     required
-                    value={form.nivel}
+                    value={form.nombre}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-dark text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-200 bg-white"
-                  >
-                    <option value="" disabled>Seleccionar nivel</option>
-                    {niveles.map((n) => (
-                      <option key={n} value={n}>{n}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="mensaje">
-                    Contame en qué puedo ayudarte *
-                  </label>
-                  <textarea
-                    id="mensaje"
-                    name="mensaje"
-                    required
-                    rows={4}
-                    value={form.mensaje}
-                    onChange={handleChange}
-                    placeholder="¿Qué materia/s necesitás? ¿Cuál es tu mayor dificultad? ¿Tenés algún examen próximo?"
-                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-dark text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-200 placeholder:text-slate-300 resize-none"
+                    placeholder="Charly García"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-dark text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-200 placeholder:text-slate-300"
                   />
                 </div>
+                <div>
+                  <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="email">
+                    Email *
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="suigeneris@email.com"
+                    className="w-full px-4 py-3 rounded-xl border border-slate-200 text-dark text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-200 placeholder:text-slate-300"
+                  />
+                </div>
+              </div>
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="btn-primary w-full justify-center text-base py-4 disabled:opacity-70"
+              <div>
+                <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="nivel">
+                  Nivel educativo *
+                </label>
+                <select
+                  id="nivel"
+                  name="nivel"
+                  required
+                  value={form.nivel}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 text-dark text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-200 bg-white"
                 >
-                  {loading ? (
-                    <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Enviando...
-                    </>
-                  ) : (
-                    <>
-                      <Send size={18} />
-                      Enviar Whatsapp
-                    </>
-                  )}
-                </button>
+                  <option value="" disabled>Seleccionar nivel</option>
+                  {niveles.map((n) => (
+                    <option key={n} value={n}>{n}</option>
+                  ))}
+                </select>
+              </div>
 
-                <p className="text-xs text-slate-400 text-center">
-                  Al enviar, aceptás que te contacte por email o WhatsApp para coordinar tu clase.
-                </p>
-              </form>
+              <div>
+                <label className="block text-sm font-medium text-slate-600 mb-1.5" htmlFor="mensaje">
+                  Contame en qué puedo ayudarte *
+                </label>
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  required
+                  rows={4}
+                  value={form.mensaje}
+                  onChange={handleChange}
+                  placeholder="¿Qué materia/s necesitás? ¿Cuál es tu mayor dificultad? ¿Tenés algún examen próximo?"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 text-dark text-sm focus:outline-none focus:ring-2 focus:ring-primary-400 focus:border-transparent transition-all duration-200 placeholder:text-slate-300 resize-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="btn-primary w-full justify-center text-base py-4 disabled:opacity-70"
+              >
+                {loading ? (
+                  <>
+                    <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    Enviando...
+                  </>
+                ) : (
+                  <>
+                    <Send size={18} />
+                    Enviar Whatsapp
+                  </>
+                )}
+              </button>
+
+              <p className="text-xs text-slate-400 text-center">
+                Al enviar, aceptás que te contacte por email o WhatsApp para coordinar tu clase.
+              </p>
+            </form>
           </div>
 
           <div

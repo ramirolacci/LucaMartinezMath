@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 
 const navItems = [
   { id: 'sobre-mi', label: 'Sobre mí' },
@@ -32,27 +32,28 @@ export default function Navbar({ activeSection }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white/80 backdrop-blur-sm'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-white/80 backdrop-blur-sm'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-18">
-          <button
-            onClick={() => document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' })}
+          <a
+            href="https://www.instagram.com/lucamateclases/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2.5 group"
-            aria-label="Ir al inicio"
+            aria-label="Instagram @lucamateclases"
           >
-            <span
-              className="w-9 h-9 rounded-lg flex items-center justify-center text-white font-black text-sm transition-transform duration-300 group-hover:scale-110"
+            <div
+              className="w-9 h-9 rounded-lg flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110"
               style={{ background: 'linear-gradient(135deg, #007BFF, #1E3A8A)' }}
             >
-              LM
-            </span>
+              <Instagram size={20} />
+            </div>
             <span className="font-bold text-sm text-dark tracking-tight group-hover:text-primary-600 transition-colors duration-200">
-              Luca Martínez Math
+              @lucamateclases
             </span>
-          </button>
+          </a>
 
           <nav className="hidden lg:flex items-center gap-1" role="navigation" aria-label="Navegación principal">
             {navItems.map((item) => {
@@ -61,11 +62,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap ${
-                    isActive
-                      ? 'text-primary-600 bg-primary-50 font-semibold'
-                      : 'text-slate-600 hover:text-primary-600 hover:bg-primary-50'
-                  }`}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 whitespace-nowrap ${isActive
+                    ? 'text-primary-600 bg-primary-50 font-semibold'
+                    : 'text-slate-600 hover:text-primary-600 hover:bg-primary-50'
+                    }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
                   {item.label}
@@ -100,11 +100,10 @@ export default function Navbar({ activeSection }: NavbarProps) {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className={`text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isActive
-                      ? 'text-primary-600 bg-primary-50 font-semibold'
-                      : 'text-slate-600 hover:text-primary-600 hover:bg-primary-50'
-                  }`}
+                  className={`text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 ${isActive
+                    ? 'text-primary-600 bg-primary-50 font-semibold'
+                    : 'text-slate-600 hover:text-primary-600 hover:bg-primary-50'
+                    }`}
                 >
                   {item.label}
                 </button>
