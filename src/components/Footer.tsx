@@ -92,7 +92,7 @@ export default function Footer() {
                 </li>
                 <li className="text-slate-400">
                   <span className="text-primary-400 font-medium block text-xs uppercase tracking-wide mb-0.5">Email</span>
-                  luca@lucamartinezmath.com
+                  luca.gm11@gmail.com
                 </li>
                 <li className="text-slate-400">
                   <span className="text-primary-400 font-medium block text-xs uppercase tracking-wide mb-0.5">Instagram</span>

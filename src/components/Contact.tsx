@@ -21,8 +21,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'luca@lucamartinezmath.com',
-    href: 'mailto:luca@lucamartinezmath.com',
+    value: 'luca.gm11@gmail.com',
+    href: 'mailto:luca.gm11@gmail.com',
   },
   {
     icon: Instagram,
