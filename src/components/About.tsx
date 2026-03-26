@@ -91,15 +91,11 @@ export default function About() {
                 className="w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl"
                 style={{ boxShadow: '0 0 0 8px rgba(0,123,255,0.1), 0 30px 60px rgba(0,123,255,0.2)' }}
               >
-                <div
-                  className="w-full h-full flex items-center justify-center"
-                  style={{ background: 'linear-gradient(135deg, #007BFF 0%, #1E3A8A 100%)' }}
-                >
-                  <div className="text-center text-white">
-                    <div className="text-7xl font-black" style={{ fontFamily: 'Poppins, sans-serif' }}>LM</div>
-                    <div className="text-sm font-medium opacity-80 mt-1">Foto perfil</div>
-                  </div>
-                </div>
+                <img
+                  src="/Luca.jpeg"
+                  alt="Luca Martínez"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="absolute -top-3 -right-3 w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-blue-50 animate-bounce-slow">
