@@ -59,7 +59,7 @@ export default function Footer() {
                 </div>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-5 max-w-xs mx-auto sm:mx-0">
-                Clases particulares de matemáticas para todos los niveles. Metodología personalizada, resultados reales.
+                Clases particulares de matemáticas para nivel secundario y universitario. Metodología personalizada, resultados reales.
               </p>
             </div>
 
