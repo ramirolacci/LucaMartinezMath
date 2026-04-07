@@ -44,7 +44,7 @@ export default function About() {
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div
-            className={`space-y-6 transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
+            className={`space-y-6 text-center lg:text-left transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}
           >
             <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
               <p className="text-xl font-semibold text-dark">
@@ -58,7 +58,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex flex-wrap gap-3 pt-2 justify-center lg:justify-start">
               {['Álgebra', 'Cálculo', 'Álgebra lineal', 'Aritmética', 'Trigonometría'].map((tag) => (
                 <span key={tag} className="px-4 py-1.5 bg-primary-50 text-primary-700 rounded-full text-sm font-medium border border-primary-100">
                   {tag}
@@ -66,7 +66,7 @@ export default function About() {
               ))}
             </div>
 
-            <div className="flex flex-wrap gap-4 pt-4">
+            <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
               <button
                 onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
                 className="btn-primary"

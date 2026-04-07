@@ -46,34 +46,31 @@ export default function Footer() {
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-            <div className="lg:col-span-2">
-              <div className="flex items-center gap-2.5 mb-4">
-                <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-lg"
-                  style={{ background: 'linear-gradient(135deg, #007BFF, #1E3A8A)' }}
-                >
-                  LM
+            <div className="lg:col-span-2 text-center sm:text-left">
+              <div className="flex items-center justify-center sm:justify-start gap-2.5 mb-4">
+                <div className="w-10 h-10 rounded-xl overflow-hidden border border-white/20">
+                  <img src="/Luca.jpeg" alt="Luca Martínez" className="w-full h-full object-cover" />
                 </div>
-                <div>
+                <div className="text-left">
                   <div className="text-white font-bold text-sm" style={{ fontFamily: 'Poppins, sans-serif' }}>
                     Luca Martínez
                   </div>
                   <div className="text-slate-400 text-xs">Profesor de Matemáticas</div>
                 </div>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed mb-5 max-w-xs">
+              <p className="text-slate-400 text-sm leading-relaxed mb-5 max-w-xs mx-auto sm:mx-0">
                 Clases particulares de matemáticas para todos los niveles. Metodología personalizada, resultados reales.
               </p>
             </div>
 
-            <div>
+            <div className="text-center sm:text-left">
               <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Navegación</h4>
               <ul className="space-y-2.5">
                 {navLinks.map((link) => (
                   <li key={link.id}>
                     <button
                       onClick={() => scrollTo(link.id)}
-                      className="text-slate-400 text-sm hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center gap-1.5"
+                      className="text-slate-400 text-sm hover:text-white hover:translate-x-1 transition-all duration-200 flex items-center justify-center sm:justify-start gap-1.5 w-full sm:w-auto"
                     >
                       <span className="w-1 h-1 rounded-full bg-primary-600 flex-shrink-0" />
                       {link.label}
@@ -83,7 +80,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
+            <div className="text-center sm:text-left">
               <h4 className="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Contacto</h4>
               <ul className="space-y-3 text-sm">
                 <li className="text-slate-400">
@@ -96,7 +93,7 @@ export default function Footer() {
                 </li>
                 <li className="text-slate-400">
                   <span className="text-primary-400 font-medium block text-xs uppercase tracking-wide mb-0.5">Instagram</span>
-                  <a href="https://www.instagram.com/lucamateclases/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center gap-1.5">
+                  <a href="https://www.instagram.com/lucamateclases/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors flex items-center justify-center sm:justify-start gap-1.5">
                     <Instagram size={14} className="text-primary-400" />
                     @lucamateclases
                   </a>
